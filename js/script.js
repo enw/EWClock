@@ -18,14 +18,12 @@ $(function () {
   // update current DOM elements
   function tick () {
     var now = new Date();
-//    console.log("tick");
     $("#main span").removeClass("current");
     $("#second"+now.getSeconds()).addClass("current");
     $("#minute"+now.getMinutes()).addClass("current");
     $("#hour"+now.getHours()).addClass("current");
   }
   var iid = setInterval( tick, MS_BETWEEN_TICKS );
-  console.log("BOOM!");
 })
 
 
