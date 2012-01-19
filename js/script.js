@@ -14,10 +14,12 @@ $(function () {
   for (var i = 0; i<60; i++) {
     $('#seconds').append('<span id="second'+i+'">'+i+'</span>');
   }
+
+  // update current DOM elements
   function tick () {
     var now = new Date();
 //    console.log("tick");
-    $("#seconds span").removeClass("current");
+    $("#main span").removeClass("current");
     $("#second"+now.getSeconds()).addClass("current");
     $("#minute"+now.getMinutes()).addClass("current");
     $("#hour"+now.getHours()).addClass("current");
