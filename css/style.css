@@ -208,10 +208,16 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Elliot Winard
    ========================================================================== */
 
+#hours, #minutes, #seconds {
+  color: white;
+}
 
+#hours .current, #minutes .current, #seconds .current {
+  color: black;
+}
 
 
 
