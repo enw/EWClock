@@ -17,6 +17,9 @@ $(function () {
 
   // update current DOM elements
   function tick () {
+    function pad(num) {
+	return (num>=10)?num:"0"+num;
+    }
     var now = new Date();
     $("#main span").removeClass("current");
     $("#second"+now.getSeconds()).addClass("current");
@@ -24,9 +27,9 @@ $(function () {
     $("#hour"+now.getHours()).addClass("current");
 
     $("#bigtime").removeClass("hidden");
-    $("#hour").text(now.getHours());
-    $("#minute").text(now.getMinutes());
-    $("#second").text(now.getSeconds());
+    $("#hour").text(pad(now.getHours()));
+    $("#minute").text(pad(now.getMinutes()));
+    $("#second").text(pad(now.getSeconds()));
   }
   var iid = setInterval( tick, MS_BETWEEN_TICKS );
 })
